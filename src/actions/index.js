@@ -3,4 +3,4 @@ export const increment = () => ({ type: 'INCREMENT' });
 
 export const decrement = () => ({ type: 'DECREMENT' });
 
-export const auth = () => ({ type: 'SIGN_IN' });
+export const auth = () => ({ type: 'LOGIN' });
