@@ -8,13 +8,15 @@ function App() {
 
   const dispatch = useDispatch();
 
+  const btnText = login ? 'Logout' : 'Login'
+
   return (
     <div>
       <h1>Counter { counter }</h1>
       <button onClick={ () => dispatch(increment()) }>+</button>
       <button onClick={ () => dispatch(decrement()) } >-</button>
       <p>{ login ? <h3>Logined</h3> : <h3>Not logined yet</h3> }</p>
-      <button onClick={ () => dispatch(auth()) } >Login</button>
+      <button onClick={ () => dispatch(auth()) } >{ btnText }</button>
     </div>
   );
 }
