@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from 'actions';
+import { increment, decrement, auth } from 'actions';
 
 function App() {
 
@@ -13,6 +13,8 @@ function App() {
       <h1>Counter { counter }</h1>
       <button onClick={ () => dispatch(increment()) }>+</button>
       <button onClick={ () => dispatch(decrement()) } >-</button>
+      <p>{ login ? <h3>Logined</h3> : <h3>Not logined yet</h3> }</p>
+      <button onClick={ () => dispatch(auth()) } >Login</button>
     </div>
   );
 }
